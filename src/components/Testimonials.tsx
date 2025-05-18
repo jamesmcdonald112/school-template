@@ -46,7 +46,7 @@ export default function Testimonials() {
                 <div key={name} className="pt-0">
                   <figure className={`rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md p-10 text-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 ${shadowColor} hover:${shadowHoverColor}`}>
                     <blockquote className={typography.stepDescription}>
-                      <p>{`“${body}”`}</p>
+                      <p>{`${body}`}</p>
                     </blockquote>
                     <figcaption className="mt-8 text-lg">
                       <div className={typography.stepTitle}>{name}</div>
