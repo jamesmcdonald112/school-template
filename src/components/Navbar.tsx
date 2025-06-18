@@ -8,7 +8,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const { navbar: { schoolName, logoSrc, logoAlt, links }, theme: { primaryColor, ctaButton } } = siteConfig
 const navigation = links
 
-export function Navbar() {
+export function  Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (

@@ -1,7 +1,8 @@
+import ClientInquiryForm from '@/components/ClientInquiryForm'
 import Divider from '@/components/Divider'
 import FAQ from '@/components/FAQ'
 import FinalCTA from '@/components/FinalCTA'
-import  HomeHero  from '@/components/HomeHero'
+import HomeHero  from '@/components/HomeHero'
 import HowItWorks from '@/components/HowItWorks'
 import ProgramsOverview from '@/components/ProgramsOverview'
 import Testimonials from '@/components/Testimonials'
@@ -13,6 +14,7 @@ export default function Home() {
       <HomeHero />
       <ProgramsOverview />
       <Divider />
+      <ClientInquiryForm config={{ schoolId: 'test-school-id-2' }}/> 
       <HowItWorks />
       <Divider />
       <Testimonials />

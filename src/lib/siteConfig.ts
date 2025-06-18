@@ -14,6 +14,7 @@ import {
 
 export const siteConfig = {
   theme: themeProfiles.navy, // adjust to the team/theme profile you want to use
+  defaultFormSource: "inquiry-form",
   navbar: {
     schoolName: "Marble Music Academy",
     logoSrc: "logo.png",
@@ -147,34 +148,94 @@ export const siteConfig = {
     },
     programs: [
       {
-        name: "Mini Musicians",        
+        name: "Mini Musicians",
         icon: UserIcon,
         href: "/mini-musicians",
         image: "/mini-musicians.webp",
+        ageRange: { min: 4, max: 6 },
+        format: "Group",
+        description: "Play-based discovery of rhythm, melody, and movement — perfect for early learners.",
+        benefits: [
+          "Build confidence and coordination through music",
+          "Hands-on instrument exploration",
+          "Foundation for future musical learning"
+        ],
+        cta: {
+          label: "Learn More",
+          href: "/mini-musicians"
+        }
       },
       {
-        name: "Beginner Piano",        
+        name: "Beginner Piano",
         icon: MusicalNoteIcon,
         href: "/beginner-piano",
         image: "/beginner-piano.webp",
+        ageRange: { min: 6, max: 10 },
+        format: "Group or Private",
+        description: "A fun, structured introduction to piano for children — no experience required. Learn notes, rhythm, and favorite songs.",
+        benefits: [
+          "Step-by-step progression at your child’s pace",
+          "Develop musical literacy and confidence",
+          "Supportive, engaging teachers"
+        ],
+        cta: {
+          label: "Explore Beginner Piano",
+          href: "/beginner-piano"
+        }
       },
       {
-        name: "Guitar Foundations",        
+        name: "Guitar Foundations",
         icon: MusicalNoteIcon,
         href: "/guitar-foundations",
         image: "/guitar-foundations.webp",
+        ageRange: { min: 8, max: 13 },
+        format: "Group or Private",
+        description: "Start strumming and picking from day one. Kids learn chords, riffs, and songs in a supportive, fun environment.",
+        benefits: [
+          "Play real songs from the start",
+          "Learn with friends or one-on-one",
+          "Build strong technique and rhythm"
+        ],
+        cta: {
+          label: "See Guitar Program",
+          href: "/guitar-foundations"
+        }
       },
       {
-        name: "Singing & Stage",        
+        name: "Singing & Stage",
         icon: MicrophoneIcon,
         href: "/singing-and-stage",
         image: "/singing-and-stage.webp",
+        ageRange: { min: 7, max: 14 },
+        format: "Group or Private",
+        description: "Find your voice! Kids explore singing, performance, and stage presence in a supportive group or private setting.",
+        benefits: [
+          "Boost confidence and creativity",
+          "Learn healthy vocal technique",
+          "Opportunities for solo and group performance"
+        ],
+        cta: {
+          label: "Discover Singing & Stage",
+          href: "/singing-and-stage"
+        }
       },
       {
-        name: "Teen Band Lab",        
+        name: "Teen Band Lab",
         icon: UserGroupIcon,
         href: "/teen-band-lab",
         image: "/teen-band-lab.webp",
+        ageRange: { min: 12, max: 17 },
+        format: "Group",
+        description: "Take your skills to the next level! Teens join a real band, collaborate, write, and perform music together.",
+        benefits: [
+          "Real-world band experience",
+          "Songwriting and creativity workshops",
+          "Performance and recording opportunities"
+        ],
+        cta: {
+          label: "Join Band Lab",
+          href: "/teen-band-lab"
+        }
       },
     ],
     cta: {

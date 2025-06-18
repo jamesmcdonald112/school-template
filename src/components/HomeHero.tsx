@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/siteConfig"
 export default function Hero() {
 
     const { badge, headline, subheadline, ctas, note, bullets, image } = siteConfig.hero
-    const { ctaButton, accentColor, font } = siteConfig.theme
+    const { ctaButton, font } = siteConfig.theme
 
     return (
       <div className={`bg-gray-900 ${font}`}>
@@ -30,9 +30,9 @@ export default function Hero() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
               <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+                <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-100 ring-1 ring-white/10 hover:ring-white/20">
                   {badge.label}{' '}
-                  <a href={badge.href} className={`${accentColor} font-semibold`}>
+                  <a href={badge.href} className='font-semibold'>
                     <span aria-hidden="true" className="absolute inset-0" />
                     {badge.actionLabel}<span aria-hidden="true">&rarr;</span>
                   </a>
@@ -42,7 +42,7 @@ export default function Hero() {
                 <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl capitalize">
                   {headline}
                 </h1>
-                <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
+                <p className="mt-8 text-lg font-medium text-pretty text-gray-100 sm:text-xl/8">
                   {subheadline}
                 </p>
                 <div className="mt-10 flex flex-col items-center justify-center gap-6 w-full md:flex-row">
@@ -52,7 +52,7 @@ export default function Hero() {
                   >
                     {ctas[0].label}
                   </a>
-                  <a href={ctas[1].href} className={`text-sm/6 font-semibold ${ctaButton.outline}`}>
+                  <a href={ctas[1].href} className={`text-sm/6 font-semibold ${ctaButton.lightOutline}`}>
                     {ctas[1].label} <span aria-hidden="true">→</span>
                   </a>
                 </div>
