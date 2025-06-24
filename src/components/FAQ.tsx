@@ -1,6 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
-import { siteConfig } from '@/lib/siteConfig'
+import { siteConfig } from '@/lib/config/schoolConfig'
 
 const { faq, theme } = siteConfig
 

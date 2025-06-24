@@ -1,6 +1,6 @@
 'use client'
 
-import { siteConfig } from '@/lib/siteConfig'
+import { siteConfig } from '@/lib/config/schoolConfig'
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'

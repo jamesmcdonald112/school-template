@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckIcon } from '@heroicons/react/24/outline';
-import { siteConfig } from '@/lib/siteConfig'
+import { siteConfig } from '@/lib/config/schoolConfig'
 import SectionHeading from './SectionHeading'
 
 export default function WhyChooseUs() {

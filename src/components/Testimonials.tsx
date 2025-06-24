@@ -1,4 +1,4 @@
-import { siteConfig } from '@/lib/siteConfig'
+import { siteConfig } from '@/lib/config/schoolConfig'
 import SectionHeading from './SectionHeading'
 import { StarIcon } from '@heroicons/react/20/solid'
 

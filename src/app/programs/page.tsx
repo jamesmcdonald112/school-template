@@ -1,4 +1,4 @@
-import { siteConfig } from '@/lib/siteConfig'
+import { siteConfig } from '@/lib/config/schoolConfig'
 import SectionHeading from '@/components/SectionHeading'
 import ProgramsGrid from '@/components/ProgramsGrid'
 

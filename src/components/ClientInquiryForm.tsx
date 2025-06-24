@@ -3,8 +3,10 @@
 import { useState } from "react"
 import { supabase } from "@/lib/supabase"
 import { sharedFormStylesExport as formStyles } from "@/lib/themeProfiles";
-import { siteConfig } from "@/lib/siteConfig";
+import { siteConfig } from "@/lib/config/schoolConfig";
 import Container from "./Container";
+import { schoolInfo } from "@/lib/config/schoolInfo";
+import { formConfig } from "@/lib/config/formConfig";
 
 type Props = {
   config: { schoolId: string }
@@ -12,6 +14,7 @@ type Props = {
 
 export default function ClientInquiryForm({ config }: Props) {
   const [status, setStatus] = useState<null | 'success' | 'error' | 'loading'>(null)
+  const [inquiryType, setInquiryType] = useState<'child' | 'adult'>('child')
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',
@@ -73,6 +76,16 @@ export default function ClientInquiryForm({ config }: Props) {
         </label>
         <input className={formStyles.input} type="text" id="last_name" name="last_name" value={formData.last_name}  onChange={handleChange} required/>
 
+        <label className={formStyles.label} htmlFor="email">
+          Email <span className="text-red-500">*</span>
+        </label>
+        <input className={formStyles.input} type="text" id="email" name="email" value={formData.email}  onChange={handleChange} required/>
+
+        <label className={formStyles.label} htmlFor="phone">
+          Phone <span className="text-red-500">*</span>
+        </label>
+        <input className={formStyles.input} type="text" id="phone" name="phone" value={formData.phone} onChange={handleChange} required/>
+
         <label className={formStyles.label} htmlFor="inquiry_type">
           Are you inquiring for yourself or a child? <span className="text-red-500">*</span>
         </label>
@@ -88,7 +101,7 @@ export default function ClientInquiryForm({ config }: Props) {
             What instrument(s) or program(s) are you interested in? <span className="text-red-500">*</span>
           </label>
           <div className="flex flex-wrap gap-2">
-            {siteConfig.programsOverview.programs.map(({ name }) => {
+            {formConfig.programInterestOptions.map((name) => {
               const value = name.toLowerCase().replace(/[^a-z]+/g, '');
               const isSelected = formData.interest.includes(value);
               return (
@@ -117,15 +130,7 @@ export default function ClientInquiryForm({ config }: Props) {
           <p className="text-sm text-gray-500 mt-1">Click to select one or more options.</p>
         </div>
 
-        <label className={formStyles.label} htmlFor="email">
-          Email <span className="text-red-500">*</span>
-        </label>
-        <input className={formStyles.input} type="text" id="email" name="email" value={formData.email}  onChange={handleChange} required/>
-
-        <label className={formStyles.label} htmlFor="phone">
-          Phone <span className="text-red-500">*</span>
-        </label>
-        <input className={formStyles.input} type="text" id="phone" name="phone" value={formData.phone} onChange={handleChange} required/>
+        
 
         <label className={formStyles.label} htmlFor="message">Message (optional)</label>
         <textarea className={formStyles.textarea} id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Anything else you'd like to add?"></textarea>

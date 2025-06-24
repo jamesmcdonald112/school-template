@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/siteConfig"
+import { siteConfig } from "@/lib/config/schoolConfig"
 
 export default function Hero() {
 
